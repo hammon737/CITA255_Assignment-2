@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CITA255_Assignment_2.MainPage">
+
+    <ScrollView>
+        <Grid ColumnDefinitions="Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto,Auto,Auto" Padding="20">
+            <Label x:Name="title" Text="Calculator" FontSize="40"/>
+            <CollectionView x:Name="myPriceList" Grid.Column="0" Grid.Row="1">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" 
+                  TextColor="CornflowerBlue" 
+                  FontSize="20" 
+                  HorizontalTextAlignment="Center"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <CollectionView x:Name="myFoodList" Grid.Column="1" Grid.Row="1">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" 
+                              TextColor="LightBlue" 
+                              FontSize="20" 
+                              HorizontalTextAlignment="Center"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <VerticalStackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="Center">
+                <Button Text="Calculate" 
+                       Clicked="testButtonClicked" 
+                       WidthRequest="200" 
+                       VerticalOptions="End" 
+                       FontSize="20"/>
+
+                <Label x:Name="sum" 
+                      Text="" 
+                      HorizontalTextAlignment="Center" 
+                      FontSize="20"/>
+            </VerticalStackLayout>
+        </Grid>
+
+
+
+    </ScrollView>
+
+</ContentPage>
