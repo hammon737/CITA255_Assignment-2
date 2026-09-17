@@ -4,20 +4,20 @@ namespace CITA255_Assignment_2
 {
     public partial class MainPage : ContentPage
     {
-        List<string> Food = new List<string>
+        List<string> Games = new List<string>
         {
-            "",
-            "banana",
-            "lemon",
-            "lime",
-            "grapes",
-            "cherry",
-            "blueberry",
-            "blackberry",
-            "strawberry",
-            "rasberry"
+            "Genshin Impact",
+            "Honkai Star Rail",
+            "Twisted Wonderland",
+            "Reverse 1999",
+            "Fate: Grand Order",
+            "Limbus Company",
+            "Death Mark",
+            "Dupery",
+            "The Walking Dead",
+            "Adventure Escape"
         };
-        List<double> prices = new List<double>
+        List<double> Hours = new List<double>
         {
             5,
             20,
@@ -34,21 +34,21 @@ namespace CITA255_Assignment_2
         public MainPage()
         {
             InitializeComponent();
-            myFoodList.ItemsSource = Food;
-            myPriceList.ItemsSource = prices;
+            myGameList.ItemsSource = Games;
+            myHourList.ItemsSource = Hours;
         }
 
         private void testButtonClicked(object sender, EventArgs e)
         {
             double total = 0;
 
-            foreach (double price in prices)
+            foreach (double hour in Hours)
             {
-                total = total + price;
-                Debug.WriteLine(price);
+                total = total + hour;
+                Debug.WriteLine(hour);
             }
 
-            sum.Text = total.ToString();
+            sum.Text = total.ToString()+" hours";
 
 
         }

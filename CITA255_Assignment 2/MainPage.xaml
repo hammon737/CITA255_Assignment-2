@@ -4,34 +4,42 @@
              x:Class="CITA255_Assignment_2.MainPage">
 
     <ScrollView>
-        <Grid ColumnDefinitions="Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto,Auto,Auto" Padding="20">
-            <Label x:Name="title" Text="Calculator" FontSize="40"/>
-            <CollectionView x:Name="myPriceList" Grid.Column="0" Grid.Row="1">
+        <Grid ColumnDefinitions="Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="20">
+            <Label x:Name="title" 
+                   Text="Game Hours Calculator" 
+                   FontSize="40" Grid.Column="0" 
+                   Grid.Row="0" 
+                   Grid.ColumnSpan="2" 
+                   Padding="10"/>
+            <Label x:Name="heading1" 
+                   Text="Games" 
+                   Grid.Column="0" 
+                   Grid.Row="1"/>
+            <CollectionView x:Name="myHourList" Grid.Column="1" Grid.Row="2">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Label Text="{Binding .}" 
                   TextColor="CornflowerBlue" 
-                  FontSize="20" 
-                  HorizontalTextAlignment="Center"/>
+                  FontSize="20" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <CollectionView x:Name="myFoodList" Grid.Column="1" Grid.Row="1">
+            <CollectionView x:Name="myGameList" Grid.Column="0" Grid.Row="2">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Label Text="{Binding .}" 
                               TextColor="LightBlue" 
-                              FontSize="20" 
-                              HorizontalTextAlignment="Center"/>
+                              FontSize="20" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <VerticalStackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalOptions="Center">
+            <VerticalStackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" VerticalOptions="Center">
                 <Button Text="Calculate" 
                        Clicked="testButtonClicked" 
                        WidthRequest="200" 
+                        Margin="30"
                        VerticalOptions="End" 
                        FontSize="20"/>
 
