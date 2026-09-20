@@ -10,17 +10,30 @@
                    FontSize="40" Grid.Column="0" 
                    Grid.Row="0" 
                    Grid.ColumnSpan="2" 
-                   Padding="10"/>
+                   Padding="10"
+                   FontFamily="Machille Bold"
+                   HorizontalTextAlignment="Center"/>
             <Label x:Name="heading1" 
                    Text="Games" 
                    Grid.Column="0" 
-                   Grid.Row="1"/>
+                   Grid.Row="1"
+                   FontFamily="Machille Bold"
+                   TextColor="LightBlue" 
+                   FontSize="30" />
+            <Label x:Name="heading2" 
+                   Text="Hours Played" 
+                   Grid.Column="1" 
+                   Grid.Row="1"
+                   FontFamily="Machille Bold"
+                   TextColor="CornflowerBlue" 
+                   FontSize="30" />
             <CollectionView x:Name="myHourList" Grid.Column="1" Grid.Row="2">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Label Text="{Binding .}" 
-                  TextColor="CornflowerBlue" 
-                  FontSize="20" />
+                              FontFamily="Machille Bold"
+                              TextColor="CornflowerBlue" 
+                              FontSize="20" />
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
@@ -29,6 +42,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Label Text="{Binding .}" 
+                              FontFamily="Machille Bold"
                               TextColor="LightBlue" 
                               FontSize="20" />
                     </DataTemplate>
@@ -39,13 +53,15 @@
                 <Button Text="Calculate" 
                        Clicked="testButtonClicked" 
                        WidthRequest="200" 
-                        Margin="30"
+                       Margin="30"
                        VerticalOptions="End" 
+                       FontFamily="Machille Bold"
                        FontSize="20"/>
 
                 <Label x:Name="sum" 
                       Text="" 
                       HorizontalTextAlignment="Center" 
+                      FontFamily="Machille Bold"
                       FontSize="20"/>
             </VerticalStackLayout>
         </Grid>

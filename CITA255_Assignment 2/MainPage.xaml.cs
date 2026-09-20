@@ -19,7 +19,7 @@ namespace CITA255_Assignment_2
         };
         List<double> Hours = new List<double>
         {
-            5,
+            10,
             20,
             12,
             16,
